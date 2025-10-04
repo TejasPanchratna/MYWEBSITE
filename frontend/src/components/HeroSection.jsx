@@ -3,23 +3,22 @@ import { Link } from 'react-router-dom';
 
 function HeroSection() {
   return (
-    // Use a theme-aware background color from DaisyUI
-    <div className="hero min-h-[70vh] bg-base-200">
-      <div className="hero-content flex-col lg:flex-row-reverse gap-12">
-        
-        {/* Your Profile Picture */}
+    <div className="hero min-h-[35vh] bg-base-200">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-4">
+
+        {/* Profile Picture */}
         <img 
-          src="/profile2.jpg" // This path works because the image is in the 'public' folder
-          className="max-w-sm w-64 h-64 rounded-full shadow-2xl object-cover transition-transform duration-300 hover:scale-105"
+          src="/profile2.jpg"
+          className="w-64 h-64 rounded-full shadow-2xl object-cover transition-transform duration-300 hover:scale-105"
           alt="A picture of Tejas"
         />
 
-        {/* The Text Content */}
-        <div className="max-w-xl text-center lg:text-left">
+        {/* Text Content */}
+        <div className="flex-1 text-center lg:text-left lg:ml-8">
           <h1 className="text-5xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
             Hi, I'm Tejas!
           </h1>
-          <p className="py-6 text-lg">
+          <p className="py-4 text-2xl">
             A passionate Machine Learning student and I like learning new things.
           </p>
           <Link to="/projects" className="btn btn-outline">Explore My Projects</Link>

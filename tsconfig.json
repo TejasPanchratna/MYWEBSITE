@@ -1,0 +1,8 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./backend-nestjs" },
+    { "path": "./frontend" },
+    { "path": "./prediction_api" }
+  ]
+}

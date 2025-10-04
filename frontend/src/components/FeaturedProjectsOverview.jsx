@@ -8,7 +8,7 @@ function FeaturedProjectsOverview() {
       description: "A full-stack MERN application to predict YouTube video views using ML models.",
       imageSrc: 'https://via.placeholder.com/400x250/89b2f0/FFFFFF?text=YT+Predictor',
       imageAlt: 'YouTube Views Predictor',
-      techTags: [{ name: "Machine Learning" }, { name: "Python" }, { name: "MERN Stack" }, { name: "Regression" }],
+      techTags: [{ name: "Machine Learning" }, { name: "Python" }, { name: "Model Deployment" }, { name: "Random Forst Regressor & Classifier" }, { name: "Data Extraction and Cleaning" }],
       demoLink: '/projects/ytml-predictor',
       githubLink: '#',
       isFeatured: true,
