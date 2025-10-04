@@ -1,7 +1,8 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
+import { motion } from 'framer-motion';
 
-function ProjectsPage() {
+function ProjectsPage({ currentTheme }) { // receive theme as prop
   const projects = [
     {
       title: "YouTube Views Predictor",
@@ -27,19 +28,26 @@ function ProjectsPage() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-center mb-10 text-blue-700" style={{ fontFamily: "'Playfair Display', serif" }}>
-        My Projects
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
-          <ProjectCard 
-            key={index}
-            {...project}
-          />
-        ))}
+    <motion.div
+      className="bg-base-200 transition-colors duration-300 min-h-screen pt-24 py-12"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
+      <div className="container mx-auto px-4">
+        <h1
+          className={`text-4xl font-bold text-center mb-10 ${currentTheme === 'luxury' ? 'text-blue-700' : 'text-blue-600'}`}
+          style={{ fontFamily: "'Playfair Display', serif" }}
+        >
+          My Projects
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} currentTheme={currentTheme} />
+          ))}
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

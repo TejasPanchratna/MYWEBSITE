@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 function AboutMeSection() {
   return (
-    <div className="relative z-10 py-16 px-6 sm:px-10 lg:px-16 flex justify-center items-center bg-base-200/30 backdrop-blur-sm">
+    <div className="relative z-10 py-16 px-6 sm:px-10 lg:px-16 flex justify-center items-center bg-base-200/30 backdrop-blur-sm transition-colors duration-300">
       <motion.div
-        className="card bg-base-100 shadow-xl p-10 sm:p-12 lg:p-14 max-w-6xl w-full rounded-2xl"
+        className="card bg-base-100 shadow-xl p-10 sm:p-12 lg:p-14 max-w-6xl w-full rounded-2xl transition-colors duration-300"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -21,7 +21,7 @@ function AboutMeSection() {
           </h2>
 
           {/* Paragraph */}
-          <p className="text-lg lg:text-2xl text-base-content/80 leading-relaxed text-justify">
+          <p className="text-lg lg:text-2xl text-base-content/80 leading-relaxed text-justify transition-colors duration-300">
             I like building things that connect logic, data, and people.
             <br /><br />
             As a final-year Computer Science student with a focus on <span className="font-semibold">AI & Machine Learning</span>, 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function HeroSection() {
   return (
-    <div className="hero min-h-[35vh] bg-base-200">
+    <div className="hero min-h-[35vh] bg-base-200 transition-colors duration-300">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-4">
 
         {/* Profile Picture */}
@@ -14,7 +14,7 @@ function HeroSection() {
         />
 
         {/* Text Content */}
-        <div className="flex-1 text-center lg:text-left lg:ml-8">
+        <div className="flex-1 text-center lg:text-left lg:ml-8 transition-colors duration-300">
           <h1 className="text-5xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
             Hi, I'm Tejas!
           </h1>

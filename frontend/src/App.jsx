@@ -7,17 +7,18 @@ import YTMLPredictorPage from './pages/YTMLPredictorPage';
 import Footer from './components/Footer';
 
 function App() {
-  const [theme, setTheme] = useState('retro');
+  const [theme, setTheme] = useState('luxury'); // default to luxury
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'retro';
+    // Load saved theme or default to 'luxury'
+    const savedTheme = localStorage.getItem('theme') || 'luxury';
     setTheme(savedTheme);
   }, []);
 
   return (
     <div data-theme={theme}>
       <Navbar setTheme={setTheme} currentTheme={theme} />
-      <main>
+      <main className="transition-colors duration-300">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
