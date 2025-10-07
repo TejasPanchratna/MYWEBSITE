@@ -8,7 +8,7 @@ function HeroSection() {
 
         {/* Profile Picture */}
         <img 
-          src="/profile2.jpg"
+          src="assets/profile2.jpg"
           className="w-64 h-64 rounded-full shadow-2xl object-cover transition-transform duration-300 hover:scale-105"
           alt="A picture of Tejas"
         />

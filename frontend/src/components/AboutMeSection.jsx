@@ -21,7 +21,7 @@ function AboutMeSection() {
           </h2>
 
           {/* Paragraph */}
-          <p className="text-lg lg:text-2xl text-base-content/80 leading-relaxed text-justify transition-colors duration-300">
+          <p className="text-lg lg:text-xl text-base-content/80 leading-relaxed text-justify transition-colors duration-300">
             I like building things that connect logic, data, and people.
             <br /><br />
             As a final-year Computer Science student with a focus on <span className="font-semibold">AI & Machine Learning</span>, 
@@ -36,7 +36,7 @@ function AboutMeSection() {
             where I’m contributing to a multi-tenant SaaS platform and learning what it takes to build reliable, scalable systems 
             that make a real impact.
             <br /><br />
-            I’m always exploring new tools, ideas, and perspectives — from AI and data to filmmaking and storytelling — 
+            I’m always exploring new tools, ideas, and perspectives — 
             because to me, learning is a lifelong experiment.
           </p>
         </div>

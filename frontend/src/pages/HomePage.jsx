@@ -4,7 +4,7 @@ import AboutMeSection from "../components/AboutMeSection";
 import ProjectsScroller from "../components/ProjectsScroller";
 import CertificatesScroller from "../components/CertificatesScroller";
 
-function HomePage() {
+export default function HomePage() {
   return (
     <div className="pt-20 lg:pt-24 bg-base-200 min-h-screen transition-colors duration-300">
       <HeroSection />
@@ -14,5 +14,3 @@ function HomePage() {
     </div>
   );
 }
-
-export default HomePage;

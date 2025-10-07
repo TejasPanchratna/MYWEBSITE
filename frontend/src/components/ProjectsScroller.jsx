@@ -1,49 +1,56 @@
 import React from "react";
 import { FolderOpen } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import HoverCard from "./HoverCard";
 
 const projects = [
   {
     title: "YouTube Views Predictor",
-    description: "An ML-powered app predicting YouTube video performance.",
-    image: "/images/projects/ytml_v1.webp",
+    description: "ML-assisted predictor that estimates video views from metadata & thumbnails.",
+    image: "/assets/projects/ytml_v1.webp",
+    slug: "youtube-views-predictor",
   },
   {
     title: "Portfolio Website",
-    description: "A personal portfolio built with MERN and AI integrations.",
-    image: "/images/projects/portfolio_app.webp",
+    description: "MERN + AI integrations, aesthetic UI, project showcase and blog.",
+    image: "/assets/projects/portfolio_app.webp",
+    slug: "portfolio-website",
   },
   {
     title: "Analytics Dashboard",
-    description: "Data visualization dashboard using React + D3.js.",
-    image: "/images/projects/analytics_dashboard.webp",
+    description: "Interactive dashboard with charts, filters and export features.",
+    image: "/assets/projects/analytics_dashboard.webp",
+    slug: "analytics-dashboard",
+  },
+  {
+    title: "Analytics Dashboard",
+    description: "Interactive dashboard with charts, filters and export features.",
+    image: "/assets/projects/analytics_dashboard.webp",
+    slug: "analytics-dashboard",
   },
 ];
 
 export default function ProjectsScroller() {
+  const navigate = useNavigate();
+
   return (
-    <section className="px-6 py-12">
+    <section className="px-6 py-12 transition-colors duration-300">
       <div className="flex items-center gap-3 mb-6">
-        <FolderOpen className="text-primary" />
-        <h2 className="text-2xl font-semibold">My Projects</h2>
+        <FolderOpen className="text-primary transition-colors duration-300" />
+        <h2 className="text-2xl font-semibold transition-colors duration-300">My Projects</h2>
       </div>
 
-      <div className="flex overflow-x-scroll gap-6 pb-4 no-scrollbar">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="min-w-[280px] lg:min-w-[340px] backdrop-blur-xl bg-base-100/70 shadow-lg border border-base-300 rounded-2xl hover:scale-105 transition-transform duration-300"
-          >
-            <div className="p-4 space-y-3">
-              <img
-                src={project.image}
-                alt={project.title}
-                loading="lazy"
-                className="h-40 w-full object-cover rounded-xl"
-              />
-              <h3 className="text-lg font-bold">{project.title}</h3>
-              <p className="text-sm opacity-80">{project.description}</p>
-            </div>
-          </div>
+      <div className="flex gap-6 overflow-x-auto pb-4 no-scrollbar">
+        {projects.map((p) => (
+          <HoverCard
+            key={p.slug}
+            variant="project"
+            title={p.title}
+            image={p.image}
+            description={p.description}
+            buttonText="View Project"
+            onClick={() => navigate(`/projects/${p.slug}`)}
+          />
         ))}
       </div>
     </section>
