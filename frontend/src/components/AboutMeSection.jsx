@@ -32,7 +32,7 @@ function AboutMeSection() {
             My work combines structured problem-solving with curiosity and creativity, whether I’m designing a backend system, 
             training a model, or visualizing insights in Tableau.
             <br /><br />
-            I’m currently interning as a <span className="font-semibold">MERN Stack Developer</span> at ApnaDharm, 
+            I’m currently interning as a <span className="font-semibold">MERN Stack Developer</span> at 'ApnaDharm', 
             where I’m contributing to a multi-tenant SaaS platform and learning what it takes to build reliable, scalable systems 
             that make a real impact.
             <br /><br />

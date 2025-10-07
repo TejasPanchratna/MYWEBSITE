@@ -16,7 +16,7 @@ function HeroSection() {
         {/* Text Content */}
         <div className="flex-1 text-center lg:text-left lg:ml-8 transition-colors duration-300">
           <h1 className="text-5xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Hi, I'm Tejas!
+            Hi! I'm Tejas Panchratna
           </h1>
           <p className="py-4 text-2xl">
             A passionate Machine Learning student and I like learning new things.
